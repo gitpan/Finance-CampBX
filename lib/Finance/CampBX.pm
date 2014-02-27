@@ -1,5 +1,5 @@
 package Finance::CampBX;
-$Finance::CampBX::VERSION = '0.1'; # TRIAL
+$Finance::CampBX::VERSION = '0.1';
 use strict;
 use warnings;
 use LWP::UserAgent;
