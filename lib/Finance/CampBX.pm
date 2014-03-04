@@ -1,5 +1,5 @@
 package Finance::CampBX;
-$Finance::CampBX::VERSION = '0.1';
+$Finance::CampBX::VERSION = '0.2';
 use strict;
 use warnings;
 use LWP::UserAgent;
@@ -55,11 +55,6 @@ sub sendtobtc(){
 	return sendrequest('https://campbx.com/api/sendbtc.php', { 'user'=>$userid, 'pass'=>$password, 'BTCTo'=>$btcaddress,  'BTCAmt'=>$btcamount });
 }
 
-sub sendtoaccount(){	 
-	my $self = shift;
-	my ($userid, $password, $recepientid, $btcamount) = @_;
-	return sendrequest('https://campbx.com/api/sendinstant.php', { 'user'=>$userid, 'pass'=>$password, 'CBXCode'=>$recepientid,  'BTCAmt'=>$btcamount });
-}
 
 sub sendrequest(){
 	my ( $url, $options ) = @_;
@@ -94,7 +89,7 @@ Finance::CampBX - Access to the CampBX bitcoin trading API
 
 =head1 VERSION
 
-version 0.1
+version 0.2
 
 =head1 SYNOPSIS
 

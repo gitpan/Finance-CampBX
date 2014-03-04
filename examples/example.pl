@@ -122,14 +122,4 @@ $out .= "\n";
 print $out;
 
 
-$out = "Send Coins To Account: \n";
-$recepientid = 'test'; #Set to valid recepient CampBX account ID.
-$btcamount = 0;
-my $sendtoaccount = $campbx->sendtoaccount( $userid, $password, $recepientid, $btcamount );
-foreach my $k (keys %{$sendtoaccount}) {
-	$out .= "  $k - ".${$sendtoaccount}{$k}."\n";
-}  	
-$out .= "\n";
-print $out;	
-        	
 
